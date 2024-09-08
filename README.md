@@ -31,8 +31,8 @@ To set up this project locally, follow these steps:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/S-Axhwin/.git
-cd
+git clone https://github.com/S-Axhwin/support.git
+cd support
 ```
 ### 2. Install Dependencies
 Navigate to the root of the project and install dependencies:
