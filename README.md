@@ -87,6 +87,38 @@ Here are some useful scripts defined in `package.json`:
 
 ## About the Website
 [![Figure 1](https://app.eraser.io/workspace/qUtpRrDegZ9KiYVfhbk5/preview?elements=G8GgCKr-Mhx_Knt5R4qG5g&type=embed)](https://app.eraser.io/workspace/qUtpRrDegZ9KiYVfhbk5?elements=G8GgCKr-Mhx_Knt5R4qG5g)
+# Project Overview
+This project involves two main roles: Consultant and End-User. Each role has specific access to different pages and functionalities.
+
+### Consultant
+- **Role:**
+    1. View the users.
+    2. Understand the problems reported by users.
+- **Accessible Pages:**
+    - `/`  (Home)
+    - `/users`  (List of Users)
+    - `/users/:id`  (User Details by ID)
+    - `/login`  (Login Page)
+    - `/reg`  (Registration Page)
+### End-User
+- **Role:**
+    1. Access the home page.
+    2. Search for consultants.
+- **Accessible Pages:**
+    - `/`  (Home)
+    - `/help`  (Help Page)
+    - `/login`  (Login Page)
+    - `/reg`  (Registration Page)
+## Pages Overview
+- `/` : Main landing page accessible by all users.
+- `/users` : A page listing all users, accessible only by consultants.
+- `/users/:id` : A detailed view of individual users, accessible only by consultants.
+- `/help` : A help page for end-users to seek assistance.
+- `/login` : Login page for both consultants and end-users.
+- `/reg` : Registration page for new consultants and end-users.
+## How to Use
+- Consultants can log in to view and manage user issues.
+- End-users can log in to access the home page and search for consultants based on their needs.
 
 ## Contributing
 To contribute to this project, follow these steps:
