@@ -17,7 +17,7 @@
 | Ashwin | UX/UI and Backend Developer |
 | Alfeen | Frontend Developer |
 | Shailija | Frontend Developer |
-| Varsha | Design Colours and Formats |
+| Varsha | Design Colours and Formats and UI/UX |
 
 
 ## Prerequisites

@@ -6,7 +6,7 @@ import {
   SheetTrigger,
   SheetContent,
 } from "@repo/ui/components/ui/sheet";
-import { LogOut, MenuIcon, User } from "lucide-react";
+import { LogOut, MenuIcon, User, ShieldCheck } from "lucide-react";
 import {
   RegisterLink,
   LoginLink,
@@ -29,8 +29,8 @@ export default function Component() {
     <header className="flex items-center justify-between px-4 py-3 shadow-sm sm:px-6 lg:px-8">
       <div className="flex items-center">
         <Link href="/" className="flex items-center" prefetch={false}>
-          <HospitalIcon className="h-8 w-8 text-primary" />
-          <span className="ml-2 text-lg font-bold">YuSab</span>
+          <ShieldCheck className="h-8 w-8 text-green-400" />
+          <span className="ml-2 text-lg font-bold text-green-600">Govt</span>
         </Link>
       </div>
       <nav className="hidden space-x-20 md:flex">

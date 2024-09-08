@@ -1,36 +1,47 @@
 import Link from "next/link";
 import { Button } from "@repo/ui/components/ui/button";
+import { PersonStanding, BookHeart, HandHeart } from "lucide-react";
 
+import img from "./image.png";
+import arrow from "./arrow.png";
+import Image from "next/image";
 export default function Component() {
   return (
-    <div className="bg-background text-foreground">
+    <div className=" text-foreground">
       <main>
         <section className="py-12 md:py-16 lg:py-20">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-              <div className="flex flex-col items-start gap-4">
-                <h1 className="text-3xl md:text-4xl font-bold">
-                  ALL HEALTH. NO EXCUSES.
-                </h1>
-                <p className="text-muted-foreground text-lg mt-1">
-                  You want to stay healthy. We are here to help.
-                </p>
-                <h1 className="text-2xl md:text-3xl font-serif mt-2 mb-2">
-                  " Today, you need Healthcare <br />
-                  which is <br />
-                  <del>Reactive</del> Proactive. "
-                </h1>
-                <Link href="/alldocs">
-                  <Button>Book Appointment</Button>
-                </Link>
+              <div className="grid w-full place-items-center relative">
+                <Image
+                  alt=""
+                  src={arrow}
+                  className="absolute top-0 left-0 w-28 mb-10 -z-10"
+                />
+                <div className="flex flex-col items-start gap-4 ">
+                  <h1 className="text-3xl md:text-4xl font-bold ">
+                    Emotional Support for Everyone
+                  </h1>
+                  <p className="text-muted-foreground text-lg mt-1">
+                    You want to stay healthy. We are here to help.
+                  </p>
+                  <h1 className="text-2xl md:text-3xl font-serif mt-2 mb-2">
+                    Helping those who feel lonely find <br /> Comfort and
+                    Connection.
+                  </h1>
+                  <Link href="/alldocs">
+                    <Button>Book Appointment</Button>
+                  </Link>
+                </div>
               </div>
-              <div className="relative overflow-hidden rounded-lg shadow-lg">
-                <img
-                  src="https://media.licdn.com/dms/image/C4D12AQE7kui_nw68Fw/article-cover_image-shrink_600_2000/0/1632171620746?e=2147483647&v=beta&t=8Ggp8VMfaRFOPewXs8Z-AEKWfg8knPXojJnK7KnNneg"
+              <div className="relative overflow-hidden drop-shadow-sm">
+                <Image
+                  alt="img"
+                  src={img}
                   width={200}
                   height={100}
                   className="w-full h-full object-contain"
-                  style={{ aspectRatio: "200/100", objectFit: "fill" }}
+                  style={{ objectFit: "fill" }}
                 />
               </div>
             </div>
@@ -42,60 +53,46 @@ export default function Component() {
               <div className="bg-background rounded-lg shadow-lg p-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="bg-primary rounded-full p-2">
-                    <SkullIcon className="h-6 w-6 text-primary-foreground" />
+                    <BookHeart className="h-6 w-6 text-primary-foreground" />
                   </div>
-                  <h3 className="text-xl font-semibold">Oily Skin</h3>
+                  <h3 className="text-xl font-semibold">
+                    Understanding Loneliness
+                  </h3>
                 </div>
                 <p className="text-muted-foreground">
-                  Discover the best makeup and skincare products to control
-                  shine and keep your complexion looking fresh and radiant.
+                  Explore how loneliness impacts mental health and ways to
+                  overcome it.
                 </p>
-                <Link
-                  href="#"
-                  className="text-primary font-medium mt-4 inline-flex items-center gap-1"
-                  prefetch={false}
-                >
-                  Shop Oily Skin
-                  <ArrowRightIcon className="h-4 w-4" />
-                </Link>
               </div>
               <div className="bg-background rounded-lg shadow-lg p-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="bg-primary rounded-full p-2">
-                    <SkullIcon className="h-6 w-6 text-primary-foreground" />
+                    <HandHeart className="h-6 w-6 text-primary-foreground" />
                   </div>
-                  <h3 className="text-xl font-semibold">Dry Skin</h3>
+                  <h3 className="text-xl font-semibold">Coping Strategies</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  Nourish and hydrate your skin with our curated selection of
-                  moisturizing makeup and skincare products.
+                  Discover practical strategies to manage feelings of isolation
+                  and improve well-being.
                 </p>
-                <Link
-                  href="#"
-                  className="text-primary font-medium mt-4 inline-flex items-center gap-1"
-                  prefetch={false}
-                >
-                  Shop Dry Skin
-                  <ArrowRightIcon className="h-4 w-4" />
-                </Link>
               </div>
               <div className="bg-background rounded-lg shadow-lg p-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="bg-primary rounded-full p-2">
-                    <SkullIcon className="h-6 w-6 text-primary-foreground" />
+                    <PersonStanding className="h-6 w-6 text-primary-foreground" />
                   </div>
-                  <h3 className="text-xl font-semibold">Combination Skin</h3>
+                  <h3 className="text-xl font-semibold">Community Support</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  Balance your complexion with our tailored selection of makeup
-                  and skincare products for combination skin types.
+                  Learn about the importance of community and building
+                  connections with others.
                 </p>
                 <Link
                   href="#"
                   className="text-primary font-medium mt-4 inline-flex items-center gap-1"
                   prefetch={false}
                 >
-                  Shop Combination Skin
+                  Join Community
                   <ArrowRightIcon className="h-4 w-4" />
                 </Link>
               </div>
@@ -107,7 +104,7 @@ export default function Component() {
             <div className="grid md:grid-cols-2 gap-8 md:gap-12">
               <div className="relative overflow-hidden rounded-lg shadow-lg">
                 <img
-                  src="/placeholder.svg"
+                  src="https://www.amberscript.com/wp-content/uploads/2024/05/094b0e6d-0059-4c63-89d6-ea6902d85a00.png"
                   width={600}
                   height={400}
                   alt="Trendy Looks"
@@ -117,11 +114,11 @@ export default function Component() {
               </div>
               <div className="flex flex-col items-start gap-4">
                 <h2 className="text-2xl md:text-3xl font-bold">
-                  Trending Makeup Looks
+                  Provide a Safe Space
                 </h2>
                 <p className="text-muted-foreground text-lg">
-                  Explore our curated selection of the hottest makeup trends,
-                  from bold and dramatic to soft and romantic.
+                  Create an environment where individuals feel comfortable
+                  expressing their thoughts and emotions without judgment.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <Link
@@ -132,10 +129,12 @@ export default function Component() {
                     <div className="bg-primary rounded-full p-2">
                       <PaintbrushIcon className="h-6 w-6 text-primary-foreground" />
                     </div>
-                    <h3 className="text-lg font-semibold">Glowy Skin</h3>
+                    <h3 className="text-lg font-semibold">
+                      Offer Emotional Support
+                    </h3>
                     <p className="text-muted-foreground text-sm">
-                      Achieve a radiant, dewy complexion with our illuminating
-                      makeup products.
+                      Create a space for sharing experiences, offering advice,
+                      and mutual support.
                     </p>
                   </Link>
                   <Link
@@ -146,10 +145,10 @@ export default function Component() {
                     <div className="bg-primary rounded-full p-2">
                       <PaintbrushIcon className="h-6 w-6 text-primary-foreground" />
                     </div>
-                    <h3 className="text-lg font-semibold">Smoky Eyes</h3>
+                    <h3 className="text-lg font-semibold">Build Community</h3>
                     <p className="text-muted-foreground text-sm">
-                      Create a sultry, dramatic eye look with our high-pigment
-                      eyeshadows.
+                      Connect participants to help them feel less alone in their
+                      struggles.
                     </p>
                   </Link>
                   <Link
@@ -160,10 +159,12 @@ export default function Component() {
                     <div className="bg-primary rounded-full p-2">
                       <PaintbrushIcon className="h-6 w-6 text-primary-foreground" />
                     </div>
-                    <h3 className="text-lg font-semibold">Bold Lips</h3>
+                    <h3 className="text-lg font-semibold">
+                      Promote Mental Wellness
+                    </h3>
                     <p className="text-muted-foreground text-sm">
-                      Make a statement with our long-lasting, high-impact
-                      lipstick collection.
+                      Encourage positive habits and practices for better mental
+                      health and resilience.
                     </p>
                   </Link>
                   <Link
@@ -174,10 +175,9 @@ export default function Component() {
                     <div className="bg-primary rounded-full p-2">
                       <PaintbrushIcon className="h-6 w-6 text-primary-foreground" />
                     </div>
-                    <h3 className="text-lg font-semibold">Natural Glow</h3>
+                    <h3 className="text-lg font-semibold">Emotional Relief</h3>
                     <p className="text-muted-foreground text-sm">
-                      Enhance your natural beauty with our lightweight,
-                      buildable makeup products.
+                    Sharing feelings and experiences can help alleviate
                     </p>
                   </Link>
                 </div>
